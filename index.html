@@ -39,7 +39,7 @@
 		}
 
 		var fPage = parseInt(getUrlParam('fPage', 1));
-		var lPage = fPage + 30;
+		var lPage = fPage + 1;
 
 		let url = "https://jigsaw.vitalsource.com/api/v0/books/9781307123753/print?from=" + fPage + "&to=" + lPage;
 		document.getElementById('bFrame').src = url;
@@ -47,7 +47,7 @@
 
 		function myFunction() {
 			var fPage1 = parseInt(getUrlParam1('to', 1)) + 1;
-			var lPage2 = fPage1 + 30;
+			var lPage2 = fPage1 + 1;
 			let url1 = "https://jigsaw.vitalsource.com/api/v0/books/9781307123753/print?from=" + fPage1 + "&to=" + lPage2;
 			document.getElementById('bFrame').src = url1;
 			document.getElementById('nextPage').innerHTML = lPage2 + 1;
