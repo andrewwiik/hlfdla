@@ -1,63 +1,47 @@
-<html>
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>HLFDLA</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/stack-interface.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/theme-greensea.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
 
-<head></head>
+    </head>
+    <body data-smooth-scroll-offset="77">
+        <div class="nav-container"> </div>
+        <div class="main-container">
+            <section class="cover height-80 imagebg text-center" data-overlay="3">
+                <div class="background-image-holder"> <img alt="background" src="img/landing.jpg"> </div>
+                <div class="container pos-vertical-center">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1> Highland Lakes Fire Department Ladies Auxiliary</h1>
+                            <a class="btn btn--primary type--uppercase" href="/flyer.pdf"> <span class="btn__text">
+						Download Tricky Tray Flyer</span> </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="switchable">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-lg-12 col-md-12">
+                            <h2>Tricky Tray</h2>
+                            <p class="lead"> The Highland Lakes Fire Department Ladies Auxiliary will be holding their Annual Tricky Tray on August 10, 2018 at the Highland Lakes Fire House located on Canistear Road in Highland Lakes, NJ. <br><br> We are soliciting donations for our Tricky Tray and would greatly appreciate a donation from you. All donations would be recognized as donated by your company during the drawing. We would love to add your company’s name to the list of organizations that help make our event a success.<br><br>Donations can be mailed to the post office box above or sent to HLFDLA C/o Donna Wiik, 79 Hickory Road, Highland Lakes, NJ 07422. Or, if it is more convenient, you can call Donna at 973-886-9995 or email us at <a href="mailto:HLFDLA@gmail.com">HLFDLA@gmail.com</a> and she will arrange for your donation to be picked up. <br><br> Highland Lakes is a small community and our Fire Department is entirely volunteer. While Vernon Township does provide some funding it does not assist with many of the expenses to run and maintain the physical building or numerous other expenses necessary to operate the department so that the firefighters are able to effectively respond when the unfortunate need arises. These expenses are paid for through donations and fundraisers, like our annual Tricky Tray, held throughout the year. <br><br> The Highland Lakes Fire Department Ladies Auxiliary is a 501(c)3 organization. The non-profit status of the Highland Lakes Fire Department Ladies Auxiliary can be verified at <a href="https://apps.irs.gov/app/eos/displayAll.do?dispatchMethod=displayAllInfo&Id=4306508&ein=223744920&zipCode=&country=US&deductibility=all&dispatchMethod=searchAll&isDescending=false&city=Highland+Lakes&ein1=22-3744920&postDateFrom=&exemptTypeCode=al&submitName=Search&sortColumn=orgName&totalResults=1&names=&resultsPerPage=25&indexOfFirstRow=0&postDateTo=&searchChoice=&state=All+States">this link</a>.<br><br> A copy of our 501 (c) 3 certificate can be faxed or emailed upon request.Please keep this letter for your records. A receipt will be sent if requested and a retail value is given. </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script src="js/parallax.js"></script>
+        <script src="js/smooth-scroll.min.js"></script>
+        <script src="js/scripts.js"></script>
 
-<body>
-    <iframe id="bFrame" style="border:0px #ffffff none;" width="3000" height="40" src="" scrolling="no" frameborder="1" allowfullscreen=""></iframe>
-    <h2 id="nextPage"></h2>
-    <button onclick="myFunction()">Next</button>
-    <script>
-
-    	function getUrlVars() {
-    var vars = {};
-    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-        vars[key] = value;
-    });
-    return vars;
-}
-    	function getUrlParam(parameter, defaultvalue){
-		    var urlparameter = defaultvalue;
-		    if(window.location.href.indexOf(parameter) > -1){
-		        urlparameter = getUrlVars()[parameter];
-		    }
-		    return urlparameter;
-		}
-
-		function getUrlVars1() {
-    var vars = {};
-    var parts = document.getElementById('bFrame').src.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-        vars[key] = value;
-    });
-    return vars;
-}
-    	function getUrlParam1(parameter, defaultvalue){
-		    var urlparameter = defaultvalue;
-		    if(document.getElementById('bFrame').src.indexOf(parameter) > -1){
-		        urlparameter = getUrlVars1()[parameter];
-		    }
-		    return urlparameter;
-		}
-
-		var fPage = parseInt(getUrlParam('fPage', 1));
-		var lPage = fPage + 1;
-
-		let url = "https://jigsaw.vitalsource.com/api/v0/books/9781307123753/print?from=" + fPage + "&to=" + lPage;
-		document.getElementById('bFrame').src = url;
-		document.getElementById('nextPage').innerHTML = lPage + 1;
-
-		function myFunction() {
-			var fPage1 = parseInt(getUrlParam1('to', 1)) + 1;
-			var lPage2 = fPage1 + 1;
-			let url1 = "https://jigsaw.vitalsource.com/api/v0/books/9781307123753/print?from=" + fPage1 + "&to=" + lPage2;
-			document.getElementById('bFrame').src = url1;
-			document.getElementById('nextPage').innerHTML = lPage2 + 1;
-		}
-		// setTimeout(function () { window.close(); }, 100);
-		// var onPrintFinished=function(printed){console.log("do something...");}
-
-		// //print command
-		// onPrintFinished(window.print());
-    </script>
-</body>
+    </body>
 
 </html>
